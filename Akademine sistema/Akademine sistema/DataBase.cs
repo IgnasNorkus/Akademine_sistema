@@ -74,7 +74,7 @@ namespace Akademine_sistema
 
                     if (count == 1)
                     {
-                        LoggedInTeacher = username;
+                        LoggedInUser = username;
                         Studentams s = new Studentams();
                         s.labelLoggedIn.Text = username;
                         s.Show();

@@ -65,7 +65,7 @@ namespace Akademine_sistema
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string StudentIDq = "Insert INTO Grades (student_ID,subject_ID, grade) values ('" + textBoxStudentGradeID.Text + "','" + textBoxSubjectGradeID.Text + "','" + textBoxGrade.Text + "')";
+            string StudentIDq = "Insert INTO Grades (student_ID,subject_ID, grade, username) values ('" + textBoxStudentGradeID.Text + "','" + textBoxSubjectGradeID.Text + "','" + textBoxGrade.Text + "','"+ textBoxStudName .Text+ "')";
             db.ExecuteQuery(StudentIDq);
         }
 
@@ -78,7 +78,7 @@ namespace Akademine_sistema
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string StudentIDq = "Select * from Grades";
+            string StudentIDq = "Select student_ID, subject_ID, grade from Grades";
             db.ExecuteQuery(StudentIDq);
             dataGridView1.DataSource = db.LoadData(StudentIDq);
         }

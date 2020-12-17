@@ -65,7 +65,6 @@
             this.buttonAllTeachers = new System.Windows.Forms.Button();
             this.buttonAllSubjects = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBoxGroupName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox2GroupCode = new System.Windows.Forms.TextBox();
@@ -75,6 +74,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxGroupSubject = new System.Windows.Forms.TextBox();
+            this.textBoxGroupName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -287,6 +287,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1093, 230);
             this.dataGridView1.TabIndex = 47;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -522,16 +523,6 @@
             this.label13.TabIndex = 74;
             this.label13.Text = "Grupes pavadinimas";
             // 
-            // textBoxGroupName
-            // 
-            this.textBoxGroupName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxGroupName.Location = new System.Drawing.Point(987, 82);
-            this.textBoxGroupName.Name = "textBoxGroupName";
-            this.textBoxGroupName.Size = new System.Drawing.Size(136, 22);
-            this.textBoxGroupName.TabIndex = 73;
-            // 
             // label15
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -640,11 +631,22 @@
             this.textBoxGroupSubject.Size = new System.Drawing.Size(136, 22);
             this.textBoxGroupSubject.TabIndex = 79;
             // 
+            // textBoxGroupName
+            // 
+            this.textBoxGroupName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxGroupName.Location = new System.Drawing.Point(987, 82);
+            this.textBoxGroupName.Name = "textBoxGroupName";
+            this.textBoxGroupName.Size = new System.Drawing.Size(136, 22);
+            this.textBoxGroupName.TabIndex = 81;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 710);
+            this.Controls.Add(this.textBoxGroupName);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.textBoxGroupSubject);
             this.Controls.Add(this.button4);
@@ -652,7 +654,6 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBoxGroupName);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.textBox2GroupCode);
@@ -738,7 +739,6 @@
         private System.Windows.Forms.Button buttonAllTeachers;
         private System.Windows.Forms.Button buttonAllSubjects;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBoxGroupName;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox2GroupCode;
@@ -748,5 +748,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBoxGroupSubject;
+        private System.Windows.Forms.TextBox textBoxGroupName;
     }
 }

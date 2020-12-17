@@ -48,6 +48,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxStudName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,7 +163,7 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(499, 165);
+            this.button1.Location = new System.Drawing.Point(499, 188);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 23);
             this.button1.TabIndex = 36;
@@ -187,7 +189,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(429, 119);
+            this.label5.Location = new System.Drawing.Point(429, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 17);
             this.label5.TabIndex = 34;
@@ -198,7 +200,7 @@
             this.textBoxGrade.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxGrade.Location = new System.Drawing.Point(499, 116);
+            this.textBoxGrade.Location = new System.Drawing.Point(499, 139);
             this.textBoxGrade.Name = "textBoxGrade";
             this.textBoxGrade.Size = new System.Drawing.Size(136, 22);
             this.textBoxGrade.TabIndex = 33;
@@ -209,7 +211,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(396, 93);
+            this.label7.Location = new System.Drawing.Point(396, 116);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 17);
             this.label7.TabIndex = 32;
@@ -220,7 +222,7 @@
             this.textBoxSubjectGradeID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSubjectGradeID.Location = new System.Drawing.Point(499, 88);
+            this.textBoxSubjectGradeID.Location = new System.Drawing.Point(499, 111);
             this.textBoxSubjectGradeID.Name = "textBoxSubjectGradeID";
             this.textBoxSubjectGradeID.Size = new System.Drawing.Size(136, 22);
             this.textBoxSubjectGradeID.TabIndex = 31;
@@ -231,7 +233,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(382, 65);
+            this.label8.Location = new System.Drawing.Point(382, 88);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 17);
             this.label8.TabIndex = 30;
@@ -242,7 +244,7 @@
             this.textBoxStudentGradeID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxStudentGradeID.Location = new System.Drawing.Point(499, 60);
+            this.textBoxStudentGradeID.Location = new System.Drawing.Point(499, 83);
             this.textBoxStudentGradeID.Name = "textBoxStudentGradeID";
             this.textBoxStudentGradeID.Size = new System.Drawing.Size(136, 22);
             this.textBoxStudentGradeID.TabIndex = 29;
@@ -265,7 +267,7 @@
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(498, 194);
+            this.button3.Location = new System.Drawing.Point(498, 217);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(137, 23);
             this.button3.TabIndex = 38;
@@ -281,12 +283,36 @@
             this.labelName.Size = new System.Drawing.Size(0, 17);
             this.labelName.TabIndex = 39;
             // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(381, 60);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(118, 17);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Studento Vardas:";
+            // 
+            // textBoxStudName
+            // 
+            this.textBoxStudName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxStudName.Location = new System.Drawing.Point(498, 55);
+            this.textBoxStudName.Name = "textBoxStudName";
+            this.textBoxStudName.Size = new System.Drawing.Size(136, 22);
+            this.textBoxStudName.TabIndex = 40;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(818, 612);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBoxStudName);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -337,6 +363,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         internal System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxStudName;
     }
 }
 

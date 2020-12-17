@@ -68,14 +68,14 @@ namespace Akademine_sistema
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string StudentIDq = "select * from Students WHERE name='" + textBoxName.Text + "' AND surname='" + textBoxSurname.Text + "' AND stud_ID='" + textBoxStudentID.Text + "'  AND group_ID = '" + textBoxGroupID.Text+"'";
+            string StudentIDq = "select * from Students WHERE name='" + textBoxName.Text + "' OR surname='" + textBoxSurname.Text + "' OR stud_ID='" + textBoxStudentID.Text + "'  OR group_ID = '" + textBoxGroupID.Text+"'";
             db.ExecuteQuery(StudentIDq);
             dataGridView1.DataSource = db.LoadData(StudentIDq);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string StudentIDq = "select * from Teachers WHERE name='" + textBoxTeacherName.Text + "' AND surname='" + textBoxTeacherSurname.Text + "' AND teacher_ID = '" + textBoxTeacher_ID.Text + "' AND subjectID = '" + textBoxTSubjectID.Text+"'";
+            string StudentIDq = "select * from Teachers WHERE name='" + textBoxTeacherName.Text + "' OR surname='" + textBoxTeacherSurname.Text + "' OR teacher_ID = '" + textBoxTeacher_ID.Text + "' OR subjectID = '" + textBoxTSubjectID.Text+"'";
             db.ExecuteQuery(StudentIDq);
             dataGridView1.DataSource = db.LoadData(StudentIDq);
         }
@@ -95,7 +95,7 @@ namespace Akademine_sistema
 
         private void buttonRegisterStudent_Click(object sender, EventArgs e)
         {
-            string StudentIDq = "Insert Into Students (name, surname, username,password,group_ID) values ('"+ textBoxName.Text+ "','"+ textBoxSurname .Text+ "','"+ textBoxName.Text + "','"+ textBoxSurname.Text + "','"+ textBoxGroupID + "')";
+            string StudentIDq = "Insert Into Students (name, surname, username,password,group_ID) values ('"+ textBoxName.Text+ "','"+ textBoxSurname .Text+ "','"+ textBoxName.Text + "','"+ textBoxSurname.Text + "','"+ textBoxGroupID.Text + "')";
             db.ExecuteQuery(StudentIDq);
         }
 
@@ -107,7 +107,7 @@ namespace Akademine_sistema
 
         private void buttonRegisterTeacher_Click(object sender, EventArgs e)
         {
-            string StudentIDq = "Insert Into Teachers (name, surname, username,password,subjectID) values ('" + textBoxTeacherName.Text + "','" + textBoxTeacherSurname.Text + "','" + textBoxTeacherName.Text + "','" + textBoxTeacherSurname.Text + "','" + textBoxSubjectID + "')";
+            string StudentIDq = "Insert Into Teachers (name, surname, username, password, subjectID) values ('" + textBoxTeacherName.Text + "','" + textBoxTeacherSurname.Text + "','" + textBoxTeacherName.Text + "','" + textBoxTeacherSurname.Text + "','" + textBoxTSubjectID.Text + "')";
             db.ExecuteQuery(StudentIDq);
         }
 
@@ -146,7 +146,7 @@ namespace Akademine_sistema
 
         private void button7_Click(object sender, EventArgs e)
         {
-            string StudentIDq = "select * from Groups WHERE group ='" + textBoxGroupName.Text + "' AND groupID='" + textBox2GroupCode.Text + "' AND subject_ID = '" + textBoxGroupSubject.Text + "'";
+            string StudentIDq = "select * from Groups WHERE groupID = '" + textBox2GroupCode.Text + "' AND group_name ='" + textBoxGroupName.Text + "' AND subject_ID = '" + textBoxGroupSubject.Text + "'";
             db.ExecuteQuery(StudentIDq);
             dataGridView1.DataSource = db.LoadData(StudentIDq);
         }
@@ -160,14 +160,19 @@ namespace Akademine_sistema
 
         private void button6_Click(object sender, EventArgs e)
         {
-            string StudentIDq = "Insert INTO Groups (groupID, group, subject_ID) values ('"+ textBox2GroupCode+"','"+ textBoxGroupName.Text+"','"+ textBoxGroupSubject.Text+"')";
+            string StudentIDq = "Insert INTO Groups (group_name, subject_ID) values ('"+ textBoxGroupName.Text+"','"+ textBoxGroupSubject.Text+"')";
             db.ExecuteQuery(StudentIDq);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string StudentIDq = "Delete from Groups WHERE group='" + textBoxGroupName.Text + "' AND groupID='" + textBox2GroupCode.Text + "'";
+            string StudentIDq = "Delete from Groups WHERE group_name='" + textBoxGroupName.Text + "' OR groupID='" + textBox2GroupCode.Text + "'";
             db.ExecuteQuery(StudentIDq);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
